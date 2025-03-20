@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EPICS - 2K25 Teaser</title>
+    <style>
+        /* Global styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #111;
+            color: #fff;
+        }
+
+        /* Container styles */
+        .container {
+            text-align: center;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        /* Header */
+        .header {
+            font-size: 48px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            color: #FFD700;
+        }
+
+        /* Subheading */
+        .subheading {
+            font-size: 24px;
+            margin-bottom: 40px;
+            color: #FF8C00;
+        }
+
+        /* Countdown Timer */
+        .countdown {
+            font-size: 60px;
+            font-weight: bold;
+            margin: 30px 0;
+            letter-spacing: 5px;
+            color: #00FF00;
+        }
+
+        /* Button */
+        .cta-button {
+            font-size: 18px;
+            padding: 12px 30px;
+            background-color: #FF4500;
+            color: #fff;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #FF6347;
+        }
+
+        /* Animation for heading */
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .header, .subheading {
+            animation: slideIn 1.5s ease-out;
+        }
+
+        /* Countdown animation */
+        @keyframes countdownPulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .countdown {
+            animation: countdownPulse 1s infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">EPICS - 2K25</div>
+        <div class="subheading">The Future of Innovation Starts Here</div>
+        
+        <div class="countdown" id="countdown"></div>
+
+        <div class="cta">
+            <a href="#register" class="cta-button">Register Now</a>
+        </div>
+    </div>
+
+    <script>
+        // Countdown Timer
+        const countdownElement = document.getElementById("countdown");
+
+        function countdown() {
+            const eventDate = new Date("April 10, 2025 00:00:00").getTime();
+            const currentDate = new Date().getTime();
+            const timeRemaining = eventDate - currentDate;
+
+            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+            countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+            if (timeRemaining < 0) {
+                clearInterval(countdownInterval);
+                countdownElement.innerHTML = "Event Started!";
+            }
+        }
+
+        const countdownInterval = setInterval(countdown, 1000);
+    </script>
+</body>
+
+</html>
