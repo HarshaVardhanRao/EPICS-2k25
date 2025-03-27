@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/x-icon" href="assets/img/logo.png">
+  <title>EPICS-2k25</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+  <!-- Icon -->
+  <link rel="stylesheet" type="text/css" href="assets/fonts/line-icons.css">
+  <!-- Nivo Lightbox -->
+  <link rel="stylesheet" type="text/css" href="assets/css/nivo-lightbox.css">
+  <!-- Animate -->
+  <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+  <!-- Main Style -->
+  <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+  <!-- Responsive Style -->
+  <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+  <link rel="shortcut icon" type="image/jpg" href="assets/img/codecell-logo.png" />
+
+  <style>
+    #hero-image {
+      margin-left: auto;
+      margin-right: auto;
+      width: 50vw;
+    }
+
+    @media (max-width: 600px) {
+      #sponsor-image {
+        width: 80vw !important;
+      }
+
+      #hero-image {
+        width: 90vw;
+      }
+    }
+
+    .button-active-click {
+      background-color: #007bff;
+    }
+
+    .button-active-click:active,
+    .button-active-click:hover {
+      background-color: rgb(253, 45, 191);
+      color: white;
+      box-shadow: 0 4px 10px 2px #f8f9fa;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Header Area wrapper Starts -->
+  <header id="header-wrap">
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-inverse fixed-top scrolling-navbar"
+      style="background: linear-gradient(90deg, #e87829d2, #5c79efc8)">
+      <div id="nav-container" class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div style="display: flex; filter: drop-shadow(0 0 10px #fff); justify-content: space-around; width: 100%;">
+          <a href="#" class="navbar-brand">
+            <img id="nav-logo" src="assets/img/background/mits_nav.png" alt="">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="lni-menu"></i>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto w-100 justify-content-end">
+            <li class="nav-item active">
+              <a class="nav-link" href="#header-wrap">
+                Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">
+                About
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#prizes">
+                Events
+              </a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#schedules">
+                schedule
+              </a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="#sponsors">
+                Contact
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#faq">
+                FAQs
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Area Start -->
+    <div id="hero-area" class="hero-area-bg">
+      <div class="overlay"></div>
+      <img src="./assets/img/round.png" alt="" class="round">
+      <p class="text">A One Day National Level Symposium</p>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-9 col-sm-12">
+            <div class="contents text-center">
+              <!-- <div class="icon">
+                  <i class="lni-mic"></i>
+                </div> -->
+
+              <!-- <h2 class="head-title">National Level Hackathon - 1.0</h2>
+                <p class="banner-desc">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, nobis nesciunt atque perferendis, ipsa doloremque deserunt cum qui.</p> -->
+
+              <img id="hero-image" src="assets/img/logo/logo.png" alt="">
+              <div class="banner-btn">
+                <a href="#prizes" class="btn button-active-click">Events</a>
+              </div>
+              <div class="banner-info"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section id="count">
+        <div class="count-wrapper text-center">
+          <div class="time-countdown wow fadeInUp" data-wow-delay="0.2s">
+            <div id="clock" class="time-count">
+
+              <div class="count-item-main">
+                <h3 class="count-item" id="count-days">%d</h3>
+                <h4>Days</h4>
+              </div>
+              <div class="count-item-main">
+                <h3 class="count-item" id="count-hours">%h</h3>
+                <h4>Hours</h4>
+              </div>
+              <div class="count-item-main">
+                <h3 class="count-item" id="count-mins">%m</h3>
+                <h4>Minutes</h4>
+              </div>
+              <div class="count-item-main">
+                <h3 class="count-item" id="count-sec">%s</h3>
+                <h4>Seconds</h4>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Hero Area End -->
+
+  </header>
+  <!-- Header Area wrapper End -->
+
+  <!-- Count Bar Start -->
+
+  <!-- Count Bar End -->
+
+  <!-- About Section Start -->
+  <section id="about" class="section-padding" style="background-color: white;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 col-xs-12" style="display: flex; align-items: center; justify-content: center;">
+          <div class="img-thumb">
+            <img style="width: 10vw; align-self: center; background-color: white;" class="img-fluid"
+              src="assets/img/logo.png" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-12 col-xs-12" style="color: black;">
+          <div class="about-content">
+            <div>
+              <div class="about-text">
+                <h2>About EPICS 2k25</h2>
+                <p style="color: black;">EPICS-2k25 is a 1-day National Level Technical Symposium organized by the
+                  Department of CSE-CS, MITS on 10<sup>th</sup> April 2025. This event aims to bring together students,
+                  professionals, and enthusiasts to showcase their technical skills, collaborate on innovative ideas,
+                  and compete in various technical challenges. Join us for an exciting day filled with learning,
+                  networking, and opportunities to win amazing prizes!</p>
+              </div>
+              <ul class="stylish-list mb-3 hackathon_list">
+                <li><i style="color:turquoise;" class="lni-check-mark-circle"></i>Date: 10<sup>th</sup> April</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- About Section End -->
+
+  <!-- Video Section Start -->
+  <div class="ready-to-play">
+    <img src="./assets/img/banner.jpg" alt="" class="img-banner">
+  </div>
+  <!-- Video Section End -->
+
+  <!-- Information Bar Start -->
+  <section id="information-bar">
+    <div class="container">
+      <div class="row inforation-wrapper">
+        <div class="col-lg-3 col-md-6 col-xs-12">
+          <ul>
+            <li>
+              <i class="lni lni-users"></i>
+            </li>
+            <li><span><b>Organized by</b> Department of CSE-CS</span></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 col-xs-12">
+          <ul>
+            <li>
+              <i class="lni-map-marker"></i>
+            </li>
+            <li><span><b>Venue</b> MITS</span></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 col-xs-12">
+          <ul>
+            <li>
+              <i class="lni-calendar"></i>
+            </li>
+            <li><span><b>Date & Time</b> 10<sup>th</sup> April, 2025 at 9AM</span></li>
+          </ul>
+        </div>
+
+        <!-- <div class="col-lg-3 col-md-6 col-xs-12">
+          <ul>
+            <li>
+              <i class="lni-user"></i>
+            </li>
+            <li><span><b>Team Size</b>1 to 3 members</span></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 col-xs-12">
+          <ul>
+            <li>
+              <i class="lni lni-code-alt"></i>
+            </li>
+            <a href="#domains">
+              <li><span><b>Theme</b>Open Theme</span></li>
+            </a>
+          </ul>
+        </div> -->
+      </div>
+    </div>
+
+  </section>
+  <!-- Information Bar End -->
+
+  <!-- Prizes Section Start -->
+  <section id="prizes" class="section-padding">
+    <div class="container" style="max-width: none !important;">
+      <div class="row">
+        <div class="col-12">
+          <div class="section-title-header text-center">
+            <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">Technical</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row d-flex align-items-center justify-content-center w-75 mx-auto events">
+        <div class="col-lg-3 col-md-6 col-xs-12 event-card">
+          <div class="event-item">
+            <img class="img-fluid" src="assets/img/prize/cert.png" alt="">
+            <div class="overlay-text">
+              <div class="content">
+                <h3>Paper Presentation</h3>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3
+              style="text-align: center; font-size: 18px; font-family: sans-serif; margin-bottom: 10px; margin-top: 5px;">
+              Paper Presentation</h3>
+            <p>Registration Fees: 100/-</p>
+            <a href="https://forms.gle/nYDYR5Sc3URduQf39">Register Now</a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-xs-12 event-card">
+          <div class="event-item">
+            <img class="img-fluid" src="assets/img/prize/cert.png" alt="">
+            <div class="overlay-text">
+              <div class="content">
+                <h3>Poster Presentation</h3>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3
+              style="text-align: center; font-size: 18px; font-family: sans-serif; margin-bottom: 10px; margin-top: 5px;">
+              Poster Presentation</h3>
+            <p>Registration Fees: 100/-</p>
+            <a href="https://forms.gle/nYDYR5Sc3URduQf39">Register Now</a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-xs-12 event-card">
+          <div class="event-item">
+            <img class="img-fluid" src="assets/img/prize/cert.png" alt="">
+            <div class="overlay-text">
+              <div class="content">
+                <h3>Next Gen Engineer Expo</h3>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3
+              style="text-align: center; font-size: 18px; font-family: sans-serif; margin-bottom: 10px; margin-top: 5px;">
+              Next Gen Engineer Expo</h3>
+            <p>Registration Fees: 100/-</p>
+            <a href="https://forms.gle/nYDYR5Sc3URduQf39">Register Now</a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-xs-12 event-card">
+          <div class="event-item">
+            <img class="img-fluid" src="assets/img/prize/cert.png" alt="">
+            <div class="overlay-text">
+              <div class="content">
+                <h3>Glitch Hunting</h3>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3
+              style="text-align: center; font-size: 18px; font-family: sans-serif; margin-bottom: 10px; margin-top: 5px;">
+              Glitch Hunting</h3>
+            <p>Registration Fees: 100/-</p>
+            <a href="https://forms.gle/nYDYR5Sc3URduQf39">Register Now</a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-xs-12 event-card">
+          <div class="event-item">
+            <img class="img-fluid" src="assets/img/prize/cert.png" alt="">
+            <div class="overlay-text">
+              <div class="content">
+                <h3>TechnoWhiz</h3>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3
+              style="text-align: center; font-size: 18px; font-family: sans-serif; margin-bottom: 10px; margin-top: 5px;">
+              TechnoWhiz</h3>
+            <p>Registration Fees: 100/-</p>
+            <a href="https://forms.gle/nYDYR5Sc3URduQf39">Register Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="prizes" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="section-title-header text-center">
+            <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">Non Technical</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row d-flex align-items-center justify-content-center w-75 mx-auto events">
+        <div class="col-lg-3 col-md-6 col-xs-12 event-card">
+          <div class="event-item">
+            <img class="img-fluid" src="assets/img/prize/cert.png" alt="">
+            <div class="overlay-text">
+              <div class="content">
+                <h3>Film Cracker</h3>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3
+              style="text-align: center; font-size: 18px; font-family: sans-serif; margin-bottom: 10px; margin-top: 5px;">
+              Film Cracker</h3>
+            <p>Registration Fees: 100/-</p>
+            <a href="https://forms.gle/6dUdmNfjsANj1gSX6">Register Now</a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-xs-12 event-card">
+          <div class="event-item">
+            <img class="img-fluid" src="assets/img/prize/cert.png" alt="">
+            <div class="overlay-text">
+              <div class="content">
+                <h3>Detective Dynasty</h3>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3
+              style="text-align: center; font-size: 18px; font-family: sans-serif; margin-bottom: 10px; margin-top: 5px;">
+              Detective Dynasty</h3>
+            <p>Registration Fees: 100/-</p>
+            <a href="https://forms.gle/6dUdmNfjsANj1gSX6">Register Now</a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-xs-12 event-card">
+          <div class="event-item">
+            <img class="img-fluid" src="assets/img/prize/cert.png" alt="">
+            <div class="overlay-text">
+              <div class="content">
+                <h3>Squid Game</h3>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3
+              style="text-align: center; font-size: 18px; font-family: sans-serif; margin-bottom: 10px; margin-top: 5px;">
+              Squid Game</h3>
+            <p>Registration Fees: 100/-</p>
+            <a href="https://forms.gle/6dUdmNfjsANj1gSX6">Register Now</a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-xs-12 event-card">
+          <div class="event-item">
+            <img class="img-fluid" src="assets/img/prize/cert.png" alt="">
+            <div class="overlay-text">
+              <div class="content">
+                <h3>Fitness Challenge</h3>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3
+              style="text-align: center; font-size: 18px; font-family: sans-serif; margin-bottom: 10px; margin-top: 5px;">
+              Fitness Challenge</h3>
+            <p>Registration Fees: 100/-</p>
+            <a href="https://forms.gle/6dUdmNfjsANj1gSX6">Register Now</a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-xs-12 event-card">
+          <div class="event-item">
+            <img class="img-fluid" src="assets/img/prize/cert.png" alt="">
+            <div class="overlay-text">
+              <div class="content">
+                <h3>E-Sports</h3>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3
+              style="text-align: center; font-size: 18px; font-family: sans-serif; margin-bottom: 10px; margin-top: 5px;">
+              E-Sports</h3>
+            <p>Registration Fees: 100/-</p>
+            <a href="https://forms.gle/ZDs4ZiGZ41D3CH5HA">Register Now</a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-xs-12 event-card">
+          <div class="event-item">
+            <img class="img-fluid" src="assets/img/prize/cert.png" alt="">
+            <div class="overlay-text">
+              <div class="content">
+                <h3>Short Film Contest</h3>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3
+              style="text-align: center; font-size: 18px; font-family: sans-serif; margin-bottom: 10px; margin-top: 5px;">
+              Short Film Contest</h3>
+            <p>Registration Fees: 100/-</p>
+            <a href="https://forms.gle/fv3sbwTzDF9GHoNUA">Register Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- Prizes Section End -->
+
+  <!-- Sponsors Section Start -->
+  <section id="sponsors" class="section-padding">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="section-title-header text-center">
+            <h2 id="sponsor-heading" class="section-title wow fadeInUp" data-wow-delay="0.2s">Contact us</h2>
+            <!-- <p class="wow fadeInDown" data-wow-delay="0.2s">Lorem ipsum dolor sit amet, in quodsi vulputate pro. Ius illum vocent mediocritatem an <br> cule dicta iriure at phaedrum.</p> -->
+          </div>
+        </div>
+      </div>
+      <div class="row mb-30 text-center wow fadeInDown" data-wow-delay="0.3s">
+        <div class="col-lg-12">
+          <div class="sponsors-logo text-center contact-grid">
+            <!-- <a href="https://www.csiindia.org/" target="_blank"><img src="assets/img/sponsors/wolfram.png" alt=""
+                id="sponsor-image"></a> -->
+            <p>P. Revanth Naidu</p><p><a href="tel:6281444011">6281444011</a></p>
+            <p>P. Lasya Reddy</p><p><a href="tel:6305228990">6305228990</a></p>
+            <p>T. Likith</p><p><a href="tel:9573824285">9573824285</a></p>
+            <p>G. Vinay</p><p><a href="tel:9704770699">9704770699</a></p>
+            <p>K. Mahindra</p><p><a href="tel:8328290061">8328290061</a></p>
+            <p>G. Greeshma</p><p><a href="tel:9182839701">9182839701</a></p>
+
+          </div><!-- sponsors logo end-->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Sponsors Section End -->
+
+  <!-- FAQ Section Start -->
+  <section id="faq" class="intro section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="section-title-header text-center">
+            <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">FAQs</h2>
+            <p class="wow fadeInDown" data-wow-delay="0.2s">Answers to the most frequently asked questions!</p>
+          </div>
+        </div>
+      </div>
+      <div class="row intro-wrapper">
+        <div class="col-lg-4 col-md-6 col-xs-12">
+          <div class="single-intro-text mb-70">
+            <i class="lni-microphone"></i>
+            <h3>Who can participate?</h3>
+            <p>
+              The EPICS-2k25 is right place for anyone who's interested
+              in learning and innovating with their ideas.
+            </p>
+            <span class="count-number">01</span>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-xs-12">
+          <div class="single-intro-text">
+            <i class="lni-users"></i>
+            <h3 class="ts-title">How much will it cost?</h3>
+            <p>
+              Registration for EPICS-2k25 has a small participation fee ranging from ₹50 to ₹200 depands upon events has
+              to be
+              paid while Registration.
+            </p>
+            <span class="count-number">02</span>
+          </div>
+          <div class="border-shap left"></div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-xs-12">
+          <div class="single-intro-text mb-70">
+            <i class="lni-bullhorn"></i>
+            <h3>How can I apply?</h3>
+            <p>The registration would be simply done by just clicking the register button <a href="#prizes">here</a> and
+              filling up a google form in which you would have to mention
+              your details. Registrations end on 10<sup>th</sup> April, 2025</p>
+            <span class="count-number">03</span>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-xs-12">
+          <div class="single-intro-text mb-70">
+            <i class="lni-heart"></i>
+            <h3>What if I don't know how to get Involved?</h3>
+            <p>
+              No worries, Interested in learning and working for EPICS-2k25, just contact us.
+            </p>
+            <span class="count-number">04</span>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-xs-12">
+          <div class="single-intro-text mb-70">
+            <i class="lni-cup"></i>
+            <h3>What are the prizes to be won?</h3>
+            <p>
+              Prizes will be purely based on the event and the winners will be awarded with certificates and exciting
+              prizes.
+              Participation Certificates will be provided to all participants
+            </p>
+            <span class="count-number">05</span>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-xs-12">
+          <div class="single-intro-text mb-70">
+            <i class="lni-gallery"></i>
+            <h3> How communications are done? </h3>
+            <p>
+              Just follow us on our social media handles and stay updated with the latest news and updates.
+            </p>
+            <span class="count-number">06</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FAQ Section End -->
+
+  <!-- Contact text Start -->
+  <!-- <section id="contact-text">
+    <div class="container">
+      <div class="row contact-wrapper">
+        <div class="col-lg-3 col-md-5 col-xs-12">
+          <ul>
+            <a href="https://maps.app.goo.gl/4DGFLGiAxecXrMQ96">
+              <li>
+                <i class="lni-home"></i>
+              </li>
+              <li><span>MITS, Madanapalle</li>
+            </a>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-3 col-xs-12">
+          <ul>
+            <a href="tel:+916281444011">
+              <li>
+                <i class="lni-phone"></i>
+              </li>
+              <li><span>Revanth Naidu : 6281444011</span></li>
+            </a>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-3 col-xs-12">
+          <ul>
+            <a href="mailto:mits.hackathon1.0@gmail.com">
+              <li>
+                <i class="lni-envelope"></i>
+              </li>
+              <li><span>mits.hackathon1.0@gmail.com</span></li>
+            </a>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- Contact text End -->
+
+  <footer>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-12 col-xs-12">
+          <!-- <div class="social-icons-footer">
+              <ul>
+                <li class="facebook"><a target="_blank" href="https://www.facebook.com/TSECCodeCell/"><i class="lni-facebook-filled"></i></a></li>
+                <li class="twitter"><a target="_blank" href="https://www.linkedin.com/company/tsec-codecell/"><i class="lni lni-linkedin-original"></i></i></a></li>
+                <li class="pinterest"><a target="_blank" href="https://www.instagram.com/tseccodecell/"><i class="lni lni-instagram-original"></i></a></li>
+              </ul>
+            </div> -->
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Apr 10, 2025 00:00:00").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function () {
+
+      // Get today's date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Display the result in the element with id="demo"
+      document.getElementById("count-days").innerHTML = ('0' + days).substr(-2);
+      document.getElementById("count-hours").innerHTML = ('0' + hours).substr(-2);
+      document.getElementById("count-mins").innerHTML = ('0' + minutes).substr(-2);
+      document.getElementById("count-sec").innerHTML = ('0' + seconds).substr(-2);
+
+      // If the count down is finished, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("clock").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+  </script>
+
+  <!-- Go to Top Link -->
+  <a href="#" class="back-to-top">
+    <i class="lni-chevron-up"></i>
+  </a>
+
+  <div id="preloader">
+    <div class="sk-circle">
+      <div class="sk-circle1 sk-child"></div>
+      <div class="sk-circle2 sk-child"></div>
+      <div class="sk-circle3 sk-child"></div>
+      <div class="sk-circle4 sk-child"></div>
+      <div class="sk-circle5 sk-child"></div>
+      <div class="sk-circle6 sk-child"></div>
+      <div class="sk-circle7 sk-child"></div>
+      <div class="sk-circle8 sk-child"></div>
+      <div class="sk-circle9 sk-child"></div>
+      <div class="sk-circle10 sk-child"></div>
+      <div class="sk-circle11 sk-child"></div>
+      <div class="sk-circle12 sk-child"></div>
+    </div>
+  </div>
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="assets/js/jquery-min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/jquery.countdown.min.js"></script>
+  <script src="assets/js/waypoints.min.js"></script>
+  <script src="assets/js/jquery.counterup.min.js"></script>
+  <script src="assets/js/jquery.nav.js"></script>
+  <script src="assets/js/jquery.easing.min.js"></script>
+  <script src="assets/js/wow.js"></script>
+  <script src="assets/js/nivo-lightbox.js"></script>
+  <script src="assets/js/video.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
